@@ -7,6 +7,7 @@
   </head>
   <body>
     <div class="prompt"></div>
+    <button>Next</button>
   <script>
     // List of prompts for the user
     var prompts = [
@@ -14,11 +15,17 @@
     "Type an adjective",
     "Type a noun"
     ];
-    //alert(prompts.length);
-    //alert(prompts[0]);
 
-    // put first prompt in all html elements with class
-    $(".prompt").html(prompts[2]);
+    // Keep track of current prompt we're on
+    var currentPrompt = 0;
+
+    // put the currentPrompt in html elements with class .prompt
+    $(".prompt").html(prompts[currentPrompt]);
+
+    // run nextPrompt function when button is clicked
+    $("button").click(function() {
+      nextPrompt();
+    });
   </script>
   </body>
 </html>
