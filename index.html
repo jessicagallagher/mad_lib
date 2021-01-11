@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="prompt"></div>
+  <script>
+    // List of prompts for the user
+    var prompts = [
+    "Type your name",
+    "Type an adjective",
+    "Type a noun"
+    ];
+    //alert(prompts.length);
+    //alert(prompts[0]);
+
+    // put first prompt in all html elements with class
+    $(".prompt").html(prompts[2]);
+  </script>
+  </body>
+</html>
