@@ -1,9 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta charset="utf-8">
     <title></title>
+    <style>
+      body {
+        text-align: center;
+        font-family: 'Fjalla One';
+        font-size: 20px;
+        background: #e6eaf0;
+      }
+      button {
+        margiin: 40px;
+      }
+      input {
+        font-size: 24px;
+      }
+      .fill {
+        background: white;
+        color: red;
+        border-bottom: 2px black solid;
+        font-family: 'Shadows Into Light';
+        padding: 0 6px;
+        margin: 4px;
+      }
+    </style>
   </head>
   <body>
     <div class="prompt"></div>
@@ -43,7 +66,9 @@
   }
   // puts the user's input into the html
   var showFinal = function() {
-    $('.prompt').html(answers[0]+' '+answers[1]+' '+answers[2]);
+    $('.prompt').html('This is the story of <span class="fill">'+answers[0]+'</span> and the <span class="fill">'+answers[1]+'</span> <span class="fill">'+answers[2]+'</span>.');
+    // and then hide button
+    $('button').hide();
   }
 
     // run nextPrompt function when button is clicked
